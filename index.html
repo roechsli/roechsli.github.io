@@ -9,7 +9,7 @@
     <script>
         function set_state0() {
             var xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "http://192.168.8.104/set_state0", true);
+            xhttp.open("GET", "http://192.168.1.68/set_state0", true);
             xhttp.send();
         }
     </script>
@@ -61,12 +61,12 @@
     QrScanner.hasCamera().then(hasCamera => camHasCamera.textContent = hasCamera);
     
     const scanner = new QrScanner(video, result => { 
-    window.open("http://192.168.8.104/set_state1", "_self");
+    window.open("http://192.168.1.68/set_state1", "_self");
     
     console.log("Linkstuff", result, state);
     scanner.stop();
     // wird bei erfolgreichem scan ausgeführt:
-    //window.open("http://192.168.8.104/state_1");
+    //window.open("http://192.168.1.68/state_1");
     });
     
     scanner.start();
